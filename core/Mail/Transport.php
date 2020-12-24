@@ -35,6 +35,7 @@ class Transport
         $phpMailer->CharSet = PHPMailer::CHARSET_UTF8;
         $phpMailer->Encoding = PHPMailer::ENCODING_QUOTED_PRINTABLE;
         $phpMailer->XMailer = ' ';
+        $phpMailer->SMTPAutoTLS = false;
         // avoid triggering automated (vacation) responses
         $phpMailer->addCustomHeader('Auto-Submitted', 'yes');
         $phpMailer->setLanguage(StaticContainer::get('Piwik\Translation\Translator')->getCurrentLanguage());
